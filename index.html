@@ -15,9 +15,11 @@
   <title>Super Basic HTML5 Template</title>
   <!--Links to external sources-->
   <link rel="icon" href="img/fav.png">
-  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
   <!--This links to google's jquery CDN-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <!--This links to fontawesome CDN- this is for vector icons learn more at http://fontawesome.io/-->
+  <link href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,16 +27,26 @@
   <div id="mainwrap">
     <!--ID's are use for unique elements and should only be used once a page-->
     <header>
+      <a href="https://github.com/mimnetto/simple-starter-templates" title="GitHub Repository" target="_blank">
+        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+        <!--Example of font awesome-->
+      </a>
+      <h1 class="centerhe">Super Basic Static Templates</h1>
     </header>
     <!--Main Content-->
     <div id="content">
+      <h2>Hello, World!</h2>
+      <p>Welcome to my webpage!</p>
+      <img alt="I am an image!" src="img/image.png">
     </div>
     <!-- end main content -->
     <footer>
+      <div id="todayIs">
+      </div>
     </footer>
   </div>
   <!--end mainwrap-->
   <!--Placing JavaScript at the bottom of the page (right before you close the body tag), or right before you need to use it, makes the page load faster.-->
-  <script type="text/javascript" src="js/meScript.js"></script>
+  <script type="text/javascript" src="js/myScript.js"></script>
 </body>
 <html>
