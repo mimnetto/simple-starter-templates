@@ -1,0 +1,52 @@
+<!--declare what html you will be using. In HTML5 is it simpfied-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Meta tags - Provides info about the HTML document to be used by browsers, search engines, or other web services-->
+  <!--UTF-8 is default for HTML5-->
+  <meta charset="UTF-8">
+  <!--For responsive design. Meaning the browser will render the width of the page at the width of its own screen-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A Super Basic HTML5 Template">
+  <!--SEO keywords. Don't add too many.-->
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript,Front-End Web Development">
+  <meta name="author" content="Michelle Netto">
+  <title>Super Basic HTML5 Template</title>
+  <!--Links to external sources-->
+  <link rel="icon" href="img/fav.png">
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <!--This links to google's jquery CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <!--This links to fontawesome CDN- this is for vector icons learn more at http://fontawesome.io/-->
+  <link href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!--Main page wrapper - gives you better control of page dimenstions-->
+  <div id="mainwrap">
+    <!--ID's are use for unique elements and should only be used once a page-->
+    <header>
+      <a href="https://github.com/mimnetto/simple-starter-templates" title="GitHub Repository" target="_blank">
+        <i class="fa fa-github fa-md" aria-hidden="true"></i>
+        <!--Example of font awesome-->
+      </a>
+      <h1 class="centerhe">Super Basic Static Templates</h1>
+    </header>
+    <!--Main Content-->
+    <div id="content">
+      <h2>Hello, World!</h2>
+      <p>Welcome to my webpage!</p>
+      <img alt="I am an image!" src="img/image.png">
+    </div>
+    <!-- end main content -->
+    <footer>
+      <div id="todayIs">
+      </div>
+    </footer>
+  </div>
+  <!--end mainwrap-->
+  <!--Placing JavaScript at the bottom of the page (right before you close the body tag), or right before you need to use it, makes the page load faster.-->
+  <script type="text/javascript" src="js/myScript.js"></script>
+</body>
+<html>

@@ -1,10 +1,8 @@
 /*!
  * A Super Basic CSS3 Template
- * Homepage: http://michellenetto.com
- * Copyright 2016 Michelle Netto
+ * Homepage: https://miminetto.com/
+ * Copyright 2016 - 2021 Mimimi Netto
 */
-
-
 
 /*Default properties for your page*/
 html,
@@ -21,7 +19,7 @@ body {
 }
 
 /* Styling for a page layout of header+content+footer */
-#mainwrap {
+main {
 	min-height:100%;
 	position:relative;
 }
@@ -29,6 +27,10 @@ body {
 header {
 	background:#f950ff;
 	padding:10px;
+}
+
+i.fa-github {
+	margin-left: 5%;
 }
 
 #content {
