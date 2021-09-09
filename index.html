@@ -2,52 +2,69 @@
 <!doctype html>
 <!-- the html tag should be that last tag to close at the bottom of the page -->
 <html>
-  <!-- everything in the head tag will not be seen on the page, its for the Meta data tags -->
-  <!-- Meta data tags provide info about the HTML document to be used by browsers, search engines, or other web services-->
-  <head>
-    <!-- UTF-8 encoding is prefered for HTML -->
-    <meta charset="UTF-8">
-    <!-- this is the viewport you want for responsive design. Meaning the browser will opitimize the page depending on the size of the screen  -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- Meta name tags are for SEO keywords and search engines. Don't add too many. -->
-    <meta name="description" content="A Super Basic HTML5 Template">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Front-End Development">
-    <meta name="author" content="Mimi Netto">
-    <!-- the title and icon is what shows up at the top of the browser -->
-    <!-- Next we want to add links to external resources and frameworks -->
-    <title>Super Basic HTML5 Template</title>
-    <link rel="icon" href="img/fav.png">
-    <!--This links to to your local css sheet -->
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <!--This links to google's jquery CDN -->
-    <script src="https://kit.fontawesome.com/32f29c2155.js" crossorigin="anonymous"></script>
-    <!--This is the link to fontawesome's CDN- this is for vector icons but its always changing learn more at https://fontawesome.com/start/-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+<!-- everything in the head tag will not be seen on the page, its for the Meta data tags -->
+<!-- Meta data tags provide info about the HTML document to be used by browsers, search engines, or other web services-->
+
+<head>
+  <!-- UTF-8 encoding is prefered for HTML -->
+  <meta charset="UTF-8">
+  <!-- this is the viewport you want for responsive design. Meaning the browser will opitimize the page depending on the size of the screen  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Meta name tags are for SEO keywords and search engines. Don't add too many. -->
+  <meta name="description" content="A Super Basic HTML5 Template">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript,Front-End Development">
+  <meta name="author" content="Mimi Netto">
+  <!-- the title and icon is what shows up at the top of the browser -->
+  <!-- Next we want to add links to external resources and frameworks -->
+  <title>Super Basic HTML5 Template</title>
+  <link rel="icon" href="img/fav.png">
+  <!--This links to to your local css sheet -->
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <!-- This links to google custom fonts CDN  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grandstander">
+  <!--This links to google's jquery CDN -->
+  <script src="https://kit.fontawesome.com/32f29c2155.js" crossorigin="anonymous"></script>
+  <!--This is the link to fontawesome's CDN- this is for vector icons but its always changing learn more at https://fontawesome.com/start/-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
   <!-- the basic meta data is finished so we can close the head -->
-  </head>
-  <!-- And start the body of the page -->
-  <body>
+</head>
+<!-- And start the body of the page -->
+
+<body>
   <!-- Main page wrapper - gives you better control of page dimenstions -->
-  <main>
+  <div id="wrapper">
     <header>
       <!-- Example of fontawesome's github icon linking to the repo -->
       <a href="https://github.com/mimnetto/simple-starter-templates" title="GitHub Repository" target="_blank">
-      <i class="fab fa-github-square"></i>
+        <i class="fab fa-github fa-4x"></i>
       </a>
-      <h1 class="centerhe">Super Basic Static Templates</h1>
+      <h1 class="center-heading">Super Basic Static Templates</h1>
     </header>
     <!--Main Content-->
     <div id="content">
-      <h2>Hello, World!</h2>
-      <p>Welcome to my webpage!</p>
-      <img alt="I am an image!" src="img/image.png">
+      <div class="page-text">
+        <h2>Hello, World!</h2>
+        <p>Welcome to my webpage!</p>
+      </div>
+      <!-- the hr is for dividers -->
+      <hr />
+      <div class="images">
+      <img class="center-img" alt="I am an image!" src="img/image.png">
+      <img class="right-img" alt="I am an image!" src="img/right-img.png">
+      <img class="left-img" alt="I am an image!" src="img/left-img.png">
+      </div>
     </div>
     <!-- end main content -->
     <footer>
-      <div id="todayIs">
+      <div class="flex-container">
+        <div id="todayIs" class="flex-child">
+        </div>
+        <div>
+          <p>Made with <i class="fas fa-heart fa-1x"></i> by Mimi Netto</p>
+        </div>
       </div>
     </footer>
-  </main>
+  </div>
   <!--end mainwrap-->
   <!--Placing JavaScript at the bottom of the page (right before you close the body tag), or right before you need to use it, makes the page load faster.-->
   <script type="text/javascript" src="js/myScript.js"></script>

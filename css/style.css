@@ -2,6 +2,7 @@
  * A Super Basic CSS3 Template
  * Homepage: https://miminetto.com/
  * Copyright 2016 - 2021 Mimimi Netto
+ * Version 2 - September 2021
 */
 
 /*Default properties for your page*/
@@ -10,6 +11,7 @@ body {
 	margin:0;
 	padding:0;
 	height:100%;
+	width: 100%;
   font-family: sans-serif;
 }
 
@@ -19,51 +21,101 @@ body {
 }
 
 /* Styling for a page layout of header+content+footer */
-main {
-	min-height:100%;
-	position:relative;
+
+/* wrap everything a div to 'push' the footer to the bottom */
+#wrapper {
+	position: relative;
+	min-height: 100%;
+  height: auto !important;
+	width: auto;
+  margin: 0 auto -50px; /* 50 is the height of the footer*/
 }
 
 header {
 	background:#f950ff;
-	padding:10px;
+	padding: 2%;
+	border-bottom: 5px solid #280e29;
 }
 
+/* center a heading text*/
+h1.center-heading{
+  text-align: center;
+	font-family: 'Grandstander', serif; /* we linked this font style from google in the index head*/
+	color: #280e29;
+}
+
+/* float is the simplist way to have an image and/or text side by side */
 i.fa-github {
-	margin-left: 5%;
+	float:right;
 }
 
 #content {
-  padding-left: 15px;
-  padding-right: 15px;
-	padding-bottom:50px; /* Height of the footer*/
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 15px;
+  padding: 5% 5% 15px 5%; /* top | right | bottom | left */
+  margin-right: 15px auto auto auto; /* top | right | bottom | left */
+	height: 100vh;
 }
 
 footer {
 	background:#8d50ff;
-	width:100%;
-	height:50px;
-	position:relative;;
+	height: 50px;
   padding: 15px;
-	bottom:0;
-	left:0;
+	border-top: 5px solid #280e29;
 }
 
-/* some helpful classes*/
+/* I am using flex box to align the the two divs in the footer, it works similar to boostraps grid system */
+/* learn more about flex https://css-tricks.com/snippets/css/complete-guide-grid/ */
+/*  */
 
-img.centerimg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  } /* center a image*/
+.flex-container {
+    display: flex;
+		flex-direction: grid; /* grid places the divs side by side */
+}
 
-p.centerpar {
+.flex-child {
+	flex: 1;
+}
+
+#todayIs {
+		margin: auto;
+    width: 50%;
+}
+
+/* @media is used to tailor the css for various screen sizes.  */
+/* This will change the flex direction to columns when the screep is smaller than 800px  */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column; 		/* column places the divs on top of each other */
+  }
+	#todayIs {
+			margin: auto;
+	    min-width: 100%;
+	}
+}
+
+/* classes for positioning images */
+
+.images {
+	margin-top: 5%;
+}
+
+/* center a image inside a div :vertical*/
+img.center-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+	}
+
+	/* center a image*/
+	img.right-img {
+		float: right;
+		}
+
+	/* center a image*/
+	img.left-img {
+		float: left;
+		}
+
+/* center a paragraph*/
+p.center-text{
   text-align: center;
-} /* center a paragraph*/
-
-h1.centerhe {
-  text-align: center;
-} /* center a heading text*/
+}
